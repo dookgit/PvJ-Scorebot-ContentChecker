@@ -36,7 +36,7 @@ There are heaps of comments in the YAML file, which gives further details on the
 The MonitorScript.py can be run on the same server as ScoringEngine, and makes sense to run it here too, so the whole server can act as a "Monitoring Server".
 It could even be that you could run multiple MonitorServers with the same config, but these servers could be located in different networks (subnets).
 
-So imaging if all the Blue Teams players were on 4 seperate subnets (10.1.10.0/24, 10.1.20.0/24, 10.1.30.0/24 and 10.1.40.0/24).  If you can also deploy a Monitoring Server in this same subnet, then the contect checks would be coming from the same subnet as players.  If an opposing team blocks all traffic from another teams subnet....the Monitoring Server would not be able to check that teams services, and would then mark them as offline. (That sentence didn't make much sense, but....you get the idea.  multiple Monitoring Servers could be deployed, so teams don't know which is a Monitoring Server and what is a legit player)
+So imagine if all the Blue Teams players were on 4 seperate subnets (10.1.10.0/24, 10.1.20.0/24, 10.1.30.0/24 and 10.1.40.0/24).  If you can also deploy a Monitoring Server in this same subnet, then the contect checks would be coming from the same subnet as players.  If an opposing team blocks all traffic from another teams subnet....the Monitoring Server would not be able to check that teams services, and would then mark them as offline. (That sentence didn't make much sense, but....you get the idea.  multiple Monitoring Servers could be deployed, so teams don't know which is a Monitoring Server and what is a legit player)
 
 The MonitorScript.py performs the following actions:
 
