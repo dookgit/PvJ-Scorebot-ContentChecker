@@ -58,3 +58,6 @@ I'm NOT a programmer, i stumble through coding solutions when i need todo someth
 But...i understand what each line does, so it's good for my purposes, and diagnosing when issues arise.
 
 I have also used this script i my last RvBCTF and it worked perfectly for the game duration (7 hours) monitoring systems.
+
+
+If you load up ScoringEngine with your competition.yaml file, and get a 500 Internal Server error from ScoringEngine once it's loaded, check your changes you made to the competition.yaml file, and it's usually this.  Make sure the tabs are in the right places too.
