@@ -52,3 +52,9 @@ The MonitorScript.py performs the following actions:
 - Then waits for 5 seconds before trying again to get a new job.
 
 If MonitorScript gets a 204 response when connecting to the ScoreBot API, this means there is no job todo, so it waits 5 seconds then tries again.
+
+### Note ###
+I'm NOT a programmer, i stumble through coding solutions when i need todo something.  You'll see this in my MonitorScript.  I'm sure this could be improved a lot, and i will take any help to improve it i can :)
+But...i understand what each line does, so it's good for my purposes, and diagnosing when issues arise.
+
+I have also used this script i my last RvBCTF and it worked perfectly for the game duration (7 hours) monitoring systems.
