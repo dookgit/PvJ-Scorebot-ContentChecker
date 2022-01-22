@@ -1,0 +1,1011 @@
+teams:
+- name: AdminTeam
+  color: White
+  users:
+  - username: admin
+    password: password123
+- name: MonitoredServices
+  color: Blue
+  users:
+  - username: user
+    password: password
+  services:
+
+# linux01
+  - name: BT1-linux01-WWW
+    check_name: HTTPCheck
+    host: linux01.bt1.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: linux01.bt1.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT2-linux01-WWW
+    check_name: HTTPCheck
+    host: linux01.bt2.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: linux01.bt2.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT3-linux01-WWW
+    check_name: HTTPCheck
+    host: linux01.bt3.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: linux01.bt3.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT4-linux01-WWW
+    check_name: HTTPCheck
+    host: linux01.bt4.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: linux01.bt4.rvb.ctf
+      - name: uri
+        value: "/"
+
+  - name: BT1-linux01-SMTP
+    check_name: SMTPUnAuthCheck
+    host: linux01.bt1.rvb.ctf
+    port: 25
+    points: 100
+    environments:
+    - matching_content: Successfully sent email
+      properties:
+      - name: fromuser
+        value: rvbchecker@localhost
+      - name: touser
+        value: root@localhost
+      - name: subject
+        value: A scoring engine test subject!
+      - name: body
+        value: This is the body of the email
+  - name: BT2-linux01-SMTP
+    check_name: SMTPUnAuthCheck
+    host: linux01.bt2.rvb.ctf
+    port: 25
+    points: 100
+    environments:
+    - matching_content: Successfully sent email
+      properties:
+      - name: fromuser
+        value: rvbchecker@localhost
+      - name: touser
+        value: root@localhost
+      - name: subject
+        value: A scoring engine test subject!
+      - name: body
+        value: This is the body of the email
+  - name: BT3-linux01-SMTP
+    check_name: SMTPUnAuthCheck
+    host: linux01.bt3.rvb.ctf
+    port: 25
+    points: 100
+    environments:
+    - matching_content: Successfully sent email
+      properties:
+      - name: fromuser
+        value: rvbchecker@localhost
+      - name: touser
+        value: root@localhost
+      - name: subject
+        value: A scoring engine test subject!
+      - name: body
+        value: This is the body of the email
+  - name: BT4-linux01-SMTP
+    check_name: SMTPUnAuthCheck
+    host: linux01.bt4.rvb.ctf
+    port: 25
+    points: 100
+    environments:
+    - matching_content: Successfully sent email
+      properties:
+      - name: fromuser
+        value: rvbchecker@localhost
+      - name: touser
+        value: root@localhost
+      - name: subject
+        value: A scoring engine test subject!
+      - name: body
+        value: This is the body of the email
+
+# web01
+  - name: BT1-web01-WWW
+    check_name: HTTPCheck
+    host: web01.bt1.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: web01.bt1.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT2-web01-WWW
+    check_name: HTTPCheck
+    host: web01.bt2.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: web01.bt2.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT3-web01-WWW
+    check_name: HTTPCheck
+    host: web01.bt3.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: web01.bt3.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT4-web01-WWW
+    check_name: HTTPCheck
+    host: web01.bt4.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: web01.bt4.rvb.ctf
+      - name: uri
+        value: "/"
+
+  - name: BT1-web01-FTP
+    check_name: FTPCheck
+    host: web01.bt1.rvb.ctf
+    port: 21
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remotefilepath
+        value: "/home/rvbchecker/rvbchecker_file.txt"
+      - name: filecontents
+        value: "Used by scoreboard to check the server is working. Please leave this file here, and do not modify the share or user."
+  - name: BT2-web01-FTP
+    check_name: FTPCheck
+    host: web01.bt2.rvb.ctf
+    port: 21
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remotefilepath
+        value: "/home/rvbchecker/rvbchecker_file.txt"
+      - name: filecontents
+        value: "Used by scoreboard to check the server is working. Please leave this file here, and do not modify the share or user."
+  - name: BT3-web01-FTP
+    check_name: FTPCheck
+    host: web01.bt3.rvb.ctf
+    port: 21
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remotefilepath
+        value: "/home/rvbchecker/rvbchecker_file.txt"
+      - name: filecontents
+        value: "Used by scoreboard to check the server is working. Please leave this file here, and do not modify the share or user."
+  - name: BT4-web01-FTP
+    check_name: FTPCheck
+    host: web01.bt4.rvb.ctf
+    port: 21
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remotefilepath
+        value: "/home/rvbchecker/rvbchecker_file.txt"
+      - name: filecontents
+        value: "Used by scoreboard to check the server is working. Please leave this file here, and do not modify the share or user."
+
+  - name: BT1-web01-SSH
+    check_name: SSHCheck
+    host: web01.bt1.rvb.ctf
+    port: 22
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: commands
+        value: id;ls -l /home
+    - matching_content: PID
+      properties:
+      - name: commands
+        value: ps
+  - name: BT2-web01-SSH
+    check_name: SSHCheck
+    host: web01.bt2.rvb.ctf
+    port: 22
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: commands
+        value: id;ls -l /home
+    - matching_content: PID
+      properties:
+      - name: commands
+        value: ps
+  - name: BT3-web01-SSH
+    check_name: SSHCheck
+    host: web01.bt3.rvb.ctf
+    port: 22
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: commands
+        value: id;ls -l /home
+    - matching_content: PID
+      properties:
+      - name: commands
+        value: ps
+  - name: BT4-web01-SSH
+    check_name: SSHCheck
+    host: web01.bt4.rvb.ctf
+    port: 22
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: commands
+        value: id;ls -l /home
+    - matching_content: PID
+      properties:
+      - name: commands
+        value: ps
+
+# web02
+  - name: BT1-web02-WWW
+    check_name: HTTPCheck
+    host: web02.bt1.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: web02.bt1.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT2-web02-WWW
+    check_name: HTTPCheck
+    host: web02.bt2.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: web02.bt2.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT3-web02-WWW
+    check_name: HTTPCheck
+    host: web02.bt3.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: web02.bt3.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT4-web02-WWW
+    check_name: HTTPCheck
+    host: web02.bt4.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: web02.bt5.rvb.ctf
+      - name: uri
+        value: "/"
+
+  - name: BT1-web02-SMTP
+    check_name: SMTPUnAuthCheck
+    host: web02.bt1.rvb.ctf
+    port: 25
+    points: 100
+    environments:
+    - matching_content: Successfully sent email
+      properties:
+      - name: fromuser
+        value: rvbchecker@localhost
+      - name: touser
+        value: root@localhost
+      - name: subject
+        value: A scoring engine test subject!
+      - name: body
+        value: This is the body of the email
+  - name: BT2-web02-SMTP
+    check_name: SMTPUnAuthCheck
+    host: web02.bt2.rvb.ctf
+    port: 25
+    points: 100
+    environments:
+    - matching_content: Successfully sent email
+      properties:
+      - name: fromuser
+        value: rvbchecker@localhost
+      - name: touser
+        value: root@localhost
+      - name: subject
+        value: A scoring engine test subject!
+      - name: body
+        value: This is the body of the email
+  - name: BT3-web02-SMTP
+    check_name: SMTPUnAuthCheck
+    host: web02.bt3.rvb.ctf
+    port: 25
+    points: 100
+    environments:
+    - matching_content: Successfully sent email
+      properties:
+      - name: fromuser
+        value: rvbchecker@localhost
+      - name: touser
+        value: root@localhost
+      - name: subject
+        value: A scoring engine test subject!
+      - name: body
+        value: This is the body of the email
+  - name: BT4-web02-SMTP
+    check_name: SMTPUnAuthCheck
+    host: web02.bt4.rvb.ctf
+    port: 25
+    points: 100
+    environments:
+    - matching_content: Successfully sent email
+      properties:
+      - name: fromuser
+        value: rvbchecker@localhost
+      - name: touser
+        value: root@localhost
+      - name: subject
+        value: A scoring engine test subject!
+      - name: body
+        value: This is the body of the email
+
+# dc01
+  - name: BT1-dc01-SMB
+    check_name: SMBCheck
+    host: dc01.bt1.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: dc01.bt1.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT2-dc01-SMB
+    check_name: SMBCheck
+    host: dc01.bt2.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: dc01.bt2.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT3-dc01-SMB
+    check_name: SMBCheck
+    host: dc01.bt3.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: dc01.bt3.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT4-dc01-SMB
+    check_name: SMBCheck
+    host: dc01.bt4.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: dc01.bt4.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+
+  - name: BT1-dc01-RDP
+    check_name: RDPCheck
+    host: dc01.bt1.rvb.ctf
+    port: 3389
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: SUCCESS$
+  - name: BT2-dc01-RDP
+    check_name: RDPCheck
+    host: dc01.bt2.rvb.ctf
+    port: 3389
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: SUCCESS$
+  - name: BT3-dc01-RDP
+    check_name: RDPCheck
+    host: dc01.bt3.rvb.ctf
+    port: 3389
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: SUCCESS$
+  - name: BT4-dc01-RDP
+    check_name: RDPCheck
+    host: dc01.bt4.rvb.ctf
+    port: 3389
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: SUCCESS$
+
+# db01
+  - name: BT1-db01-SMB
+    check_name: SMBCheck
+    host: db01.bt1.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: db01.bt1.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT2-db01-SMB
+    check_name: SMBCheck
+    host: db01.bt2.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: db01.bt2.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT3-db01-SMB
+    check_name: SMBCheck
+    host: db01.bt3.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: db01.bt3.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT4-db01-SMB
+    check_name: SMBCheck
+    host: db01.bt4.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: db01.bt4.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+
+  - name: BT1-db01-RDP
+    check_name: RDPCheck
+    host: db01.bt1.rvb.ctf
+    port: 3389
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: SUCCESS$
+  - name: BT2-db02-RDP
+    check_name: RDPCheck
+    host: db01.bt2.rvb.ctf
+    port: 3389
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: SUCCESS$
+  - name: BT3-db03-RDP
+    check_name: RDPCheck
+    host: db01.bt3.rvb.ctf
+    port: 3389
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: SUCCESS$
+  - name: BT4-db01-RDP
+    check_name: RDPCheck
+    host: db01.bt4.rvb.ctf
+    port: 3389
+    points: 100
+    accounts:
+    - username: rvbchecker@crapcorp.local
+      password: password123
+    environments:
+    - matching_content: SUCCESS$
+
+  - name: BT1-db01-WWW
+    check_name: HTTPCheck
+    host: db01.bt1.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: db01.bt1.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT2-db01-WWW
+    check_name: HTTPCheck
+    host: db01.bt2.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: db01.bt2.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT3-db01-WWW
+    check_name: HTTPCheck
+    host: db01.bt3.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: db01.bt3.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT4-db01-WWW
+    check_name: HTTPCheck
+    host: db01.bt4.rvb.ctf
+    port: 80
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: db01.bt4.rvb.ctf
+      - name: uri
+        value: "/"
+# win01
+  - name: BT1-win01-WWW
+    check_name: HTTPCheck
+    host: win01.bt1.rvb.ctf
+    port: 8080
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: win01.bt1.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT2-win01-WWW
+    check_name: HTTPCheck
+    host: win01.bt2.rvb.ctf
+    port: 8080
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: win01.bt2.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT3-win01-WWW
+    check_name: HTTPCheck
+    host: win01.bt3.rvb.ctf
+    port: 8080
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: win01.bt3.rvb.ctf
+      - name: uri
+        value: "/"
+  - name: BT4-win01-WWW
+    check_name: HTTPCheck
+    host: win01.bt4.rvb.ctf
+    port: 8080
+    points: 100
+    environments:
+    - matching_content: BLAH DE BLAH
+      properties:
+      - name: useragent
+        value: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+      - name: vhost
+        value: win01.bt4.rvb.ctf
+      - name: uri
+        value: "/"
+
+  - name: BT1-win01-SMB
+    check_name: SMBCheck
+    host: win01.bt1.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: win01.bt1.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT2-win01-SMB
+    check_name: SMBCheck
+    host: win01.bt2.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: win01.bt2.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT3-win01-SMB
+    check_name: SMBCheck
+    host: win01.bt3.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: win01.bt3.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT4-win01-SMB
+    check_name: SMBCheck
+    host: win01.bt4.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: win01.bt4.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+
+# xp01
+  - name: BT1-xp01-SMB
+    check_name: SMBCheck
+    host: xp01.bt1.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: xp01.bt1.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT2-xp01-SMB
+    check_name: SMBCheck
+    host: xp01.bt2.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: xp01.bt2.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT3-xp01-SMB
+    check_name: SMBCheck
+    host: xp01.bt3.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: xp01.bt3.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+  - name: BT4-xp01-SMB
+    check_name: SMBCheck
+    host: xp01.bt4.rvb.ctf
+    port: 445
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: "^SUCCESS"
+      properties:
+      - name: remote_name
+        value: xp01.bt4.rvb.ctf
+      - name: share
+        value: rvbchecker
+      - name: file
+        value: rvbchecker_file.txt
+      # SHA256 hash of file
+      - name: hash
+        value: 072727caccc8935f46278ead67fcfad5591a142c0d1b78d433e503ff76dee5e6
+
+  - name: BT1-xp01-VNC
+    check_name: VNCCheck
+    host: xp01.bt1.rvb.ctf
+    port: 5900
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: ACCOUNT FOUND
+  - name: BT2-xp01-VNC
+    check_name: VNCCheck
+    host: xp01.bt2.rvb.ctf
+    port: 5900
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: ACCOUNT FOUND
+  - name: BT3-xp01-VNC
+    check_name: VNCCheck
+    host: xp01.bt3.rvb.ctf
+    port: 5900
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: ACCOUNT FOUND
+  - name: BT4-xp01-VNC
+    check_name: VNCCheck
+    host: xp01.bt4.rvb.ctf
+    port: 5900
+    points: 100
+    accounts:
+    - username: rvbchecker
+      password: password123
+    environments:
+    - matching_content: ACCOUNT FOUND
